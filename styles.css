@@ -119,8 +119,8 @@ h1 {
 }
 
 .carousel img {
-  /* width: 260px;
-  height: 180px; */
+  width: 270px;
+  height: 180px;
   object-fit: cover;
   border-radius: 12px;
   flex-shrink: 0;
@@ -131,6 +131,7 @@ h1 {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 
 
 
