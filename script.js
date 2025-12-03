@@ -76,7 +76,7 @@ document.getElementById("calendarBtn").addEventListener("click", function () {
     
     // Set your event time here (Google Calendar needs UTC format without punctuation)
     const start = "20251207T000000"; 
-    const end   = "20251207T240000";
+    const end   = "20251207T239999";
 
     const url =
       "https://www.google.com/calendar/render?action=TEMPLATE" +
@@ -86,6 +86,7 @@ document.getElementById("calendarBtn").addEventListener("click", function () {
 
     window.open(url, "_blank");
 });
+
 
 
 
