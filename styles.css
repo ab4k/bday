@@ -16,10 +16,10 @@
 }
 
 .logo img {
-  width: 70px;      /* adjust size */
+  width: 50px;      /* adjust size */
   height: auto;
   border-radius: 12px;  /* remove if you don’t want rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px #F2BAC9;
 }
 
 
@@ -165,6 +165,7 @@ h1 {
 #calendarBtn:hover {
   background: #135cbc;
 }
+
 
 
 
