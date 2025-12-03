@@ -150,6 +150,22 @@ h1 {
 
 
 
+#calendarBtn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+#calendarBtn:hover {
+  background: #135cbc;
+}
+
 
 
 
