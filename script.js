@@ -60,3 +60,12 @@ setInterval(() => {
     .toString()
     .padStart(2, "0");
 }, 1000);
+
+// AUTO-SCROLL CAROUSEL
+const track = document.querySelector(".carousel-track");
+const images = track.innerHTML;
+
+// duplicate content to create infinite scroll
+track.innerHTML += images;
+
+
