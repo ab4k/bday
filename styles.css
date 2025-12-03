@@ -105,6 +105,23 @@ h1 {
   background: #000000;
 }
 
+.carousel{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  background:#34344A;
+}
+
+#carousel{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:10px;
+  background:#34344A;
+}
+
+
 
 
 
