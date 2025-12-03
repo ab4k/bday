@@ -72,20 +72,35 @@ track.innerHTML += images;
 document.getElementById("calendarBtn").addEventListener("click", function () {
 
     const title = "Birthday Celebration";
-    const details = "Join us in celebrating the birthday!";
+    const details = "Join us for the birthday celebration!";
     
-    // Set your event time here (Google Calendar needs UTC format without punctuation)
-    const start = "20251207T000000"; 
+    // Event time
+    const start = "20251207T000000";
     const end   = "20251208T235900";
 
+    // deep link for Google Calendar app (Android)
     const url =
-      "https://www.google.com/calendar/render?action=TEMPLATE" +
+      "com.google.android.calendar://event?action=TEMPLATE" +
       "&text=" + encodeURIComponent(title) +
       "&details=" + encodeURIComponent(details) +
       "&dates=" + start + "/" + end;
 
-    window.open(url, "_blank");
+    // Try opening Google Calendar app
+    window.location.href = url;
+
+    // Backup: if the app fails, open the web version
+    setTimeout(() => {
+        window.open(
+          "https://www.google.com/calendar/render?action=TEMPLATE" +
+          "&text=" + encodeURIComponent(title) +
+          "&details=" + encodeURIComponent(details) +
+          "&dates=" + start + "/" + end,
+          "_blank"
+        );
+    }, 400); 
 });
+
+
 
 
 
