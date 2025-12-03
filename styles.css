@@ -8,7 +8,7 @@
   font-style: normal;
 }
 .box {
-  padding-top: 25px;
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,7 +23,9 @@
   border: 5px solid white;
 }
 h1 {
+  padding-top: 25px;
   color: rgb(255, 230, 0);
 }
+
 
 
