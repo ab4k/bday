@@ -3,11 +3,11 @@
   margin: 0;
   background: #000;
   font-family: "Saira", sans-serif;
-  /* font-optical-sizing: auto; */
+  font-optical-sizing: auto;
   font-style: normal;
 }
 .box {
-  padding: 25px;
+  /* padding: 25px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -80,5 +80,6 @@ h1 {
     opacity: 0;
   }
 }
+
 
 
