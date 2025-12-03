@@ -69,3 +69,24 @@ const images = track.innerHTML;
 track.innerHTML += images;
 
 
+document.getElementById("calendarBtn").addEventListener("click", function () {
+
+    const title = "Birthday Celebration";
+    const details = "Join us in celebrating the birthday!";
+    
+    // Set your event time here (Google Calendar needs UTC format without punctuation)
+    const start = "20250210T180000"; 
+    const end   = "20250210T230000";
+
+    const url =
+      "https://www.google.com/calendar/render?action=TEMPLATE" +
+      "&text=" + encodeURIComponent(title) +
+      "&details=" + encodeURIComponent(details) +
+      "&dates=" + start + "/" + end;
+
+    window.open(url, "_blank");
+});
+
+
+
+
