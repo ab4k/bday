@@ -111,12 +111,14 @@ h1 {
   align-items:center;
   padding:10px;
   background:#34344A;
+  width:100%;
 }
 
-.carousel-img {
+.carousel-img img{
   border-radius:10px;
-  margin:5px;
+  margin: 7px;
 }
+
 
 
 
