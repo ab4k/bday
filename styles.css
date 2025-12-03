@@ -8,7 +8,7 @@
   font-style: normal;
 }
 .box {
-  padding: 25px;
+  /* padding: 25px; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -25,3 +25,4 @@
 h1 {
   color: rgb(255, 230, 0);
 }
+
