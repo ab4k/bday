@@ -73,22 +73,21 @@ document.getElementById("calendarBtn").addEventListener("click", function () {
 
     const title = "Birthday Celebration";
     const details = "Join us for the birthday celebration!";
-    
-    // Event time
     const start = "20251207T000000";
     const end   = "20251208T235900";
 
-    // deep link for Google Calendar app (Android)
-    const url =
-      "com.google.android.calendar://event?action=TEMPLATE" +
+    // Intent URL to launch Google Calendar app (Android only)
+    const intentURL =
+      "intent://com.google.android.calendar/event?action=TEMPLATE" +
       "&text=" + encodeURIComponent(title) +
       "&details=" + encodeURIComponent(details) +
-      "&dates=" + start + "/" + end;
+      "&dates=" + start + "/" + end +
+      "#Intent;scheme=com.google.android.calendar;package=com.google.android.calendar;end";
 
-    // Try opening Google Calendar app
-    window.location.href = url;
+    // Open the Google Calendar app
+    window.location.href = intentURL;
 
-    // Backup: if the app fails, open the web version
+    // Fallback for devices that cannot open intent
     setTimeout(() => {
         window.open(
           "https://www.google.com/calendar/render?action=TEMPLATE" +
@@ -97,8 +96,10 @@ document.getElementById("calendarBtn").addEventListener("click", function () {
           "&dates=" + start + "/" + end,
           "_blank"
         );
-    }, 400); 
+    }, 600);
+
 });
+
 
 
 
