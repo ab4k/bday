@@ -8,7 +8,7 @@
   font-style: normal;
 }
 .box {
-  
+  padding: 25px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -23,9 +23,62 @@
   border: 5px solid white;
 }
 h1 {
-  padding-top: 25px;
   color: rgb(255, 230, 0);
 }
 
+#balloonBtn {
+  margin-top: 10px;
+  background-color: rgb(196, 2, 161);
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 25px;
 
+  color: rgb(250, 188, 250);
+}
 
+#balloonContainer {
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 99999;
+}
+
+.balloon {
+  width: 40px;
+  height: 55px;
+  background: red;
+  border-radius: 50% 50% 45% 45%;
+  position: absolute;
+  bottom: -80px;
+  animation: rise 4s linear forwards;
+  box-shadow: inset -4px -8px rgba(0, 0, 0, 0.15);
+}
+
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 12px;
+  background: #555;
+  border-radius: 3px;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  85% {
+    transform: translateY(-500px) scale(1.05);
+  }
+  100% {
+    transform: translateY(-550px) scale(0);
+    opacity: 0;
+  }
+}
