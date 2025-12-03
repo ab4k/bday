@@ -105,20 +105,32 @@ h1 {
   background: #000000;
 }
 
-.carousel{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:10px;
-  background:#34344A;
-  width:100%;
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  margin: 40px auto;
+  border-radius: 15px;
 }
 
-.carousel-img img{
-  border-radius:10px;
-  margin: 7px;
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 35s linear infinite;
 }
 
+.carousel img {
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 
 
