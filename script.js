@@ -61,12 +61,32 @@ setInterval(() => {
     .padStart(2, "0");
 }, 1000);
 
-// AUTO-SCROLL CAROUSEL
-const track = document.querySelector(".carousel-track");
-const images = track.innerHTML;
+// // AUTO-SCROLL CAROUSEL
+// const track = document.querySelector(".carousel-track");
+// const images = track.innerHTML;
 
-// duplicate content to create infinite scroll
-track.innerHTML += images;
+// // duplicate content to create infinite scroll
+// track.innerHTML += images;
+
+
+const track = document.getElementById("carouselTrack");
+let scrollSpeed = 1; // lower = slower
+
+// Duplicate all images 2 times for seamless looping
+track.innerHTML += track.innerHTML + track.innerHTML;
+
+function smoothScroll() {
+    track.scrollLeft += scrollSpeed;
+
+    // When we reach 1/3 of scrollable width, reset
+    if (track.scrollLeft >= track.scrollWidth / 3) {
+        track.scrollLeft = 0;
+    }
+    requestAnimationFrame(smoothScroll);
+}
+
+smoothScroll();
+
 
 
 document.getElementById("calendarBtn").addEventListener("click", function () {
@@ -99,6 +119,7 @@ document.getElementById("calendarBtn").addEventListener("click", function () {
     }, 600);
 
 });
+
 
 
 
