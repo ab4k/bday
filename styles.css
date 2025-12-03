@@ -7,6 +7,22 @@
   box-sizing: border-box;
   font-style: normal;
 }
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.logo img {
+  width: 70px;      /* adjust size */
+  height: auto;
+  border-radius: 12px;  /* remove if you don’t want rounded corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
 .box {
   padding: 25px;
   display: flex;
@@ -131,6 +147,7 @@ h1 {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 
 
 
