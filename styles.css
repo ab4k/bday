@@ -115,7 +115,7 @@ h1 {
 .carousel-track {
   display: flex;
   gap: 20px;
-  animation: scroll 35s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
 .carousel img {
@@ -131,6 +131,7 @@ h1 {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
 
 
 
