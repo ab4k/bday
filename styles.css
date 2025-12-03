@@ -105,13 +105,13 @@ h1 {
   background: #000000;
 }
 
-.carousel{
+/* .carousel{
   display:flex;
   justify-content:center;
   align-items:center;
   padding:10px;
   background:#34344A;
-}
+} */
 
 #carousel{
   display:flex;
@@ -121,6 +121,10 @@ h1 {
   background:#34344A;
 }
 
+.carousel-img {
+  border-radius:10px;
+  margin:5px;
+}
 
 
 
